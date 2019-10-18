@@ -1,0 +1,162 @@
+/* Bootstrap css */
+@import "../../node_modules/bootstrap-scss/bootstrap.scss";
+/* FontAwesome css */
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700,900&display=swap');
+
+.gradientBG{
+    background-image: linear-gradient(to right top, #2aacff, #21a2f9, #1a99f2, #148feb, #1086e4, #028ee8, #0096ec, #009eef, #00b8f8, #00d0f8, #00e7f1, #5ffbe7);
+    background-size: cover;
+    background-attachment: fixed
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    color: $white;
+    background: none
+}
+img{
+    max-width: 100%
+}
+/* bootstrap Custom style */
+.container{
+    max-width: 1600px;
+}
+/* List Style */
+.listStyle{
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    li{
+        position: relative;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        padding-left: 35px;
+        i{
+            position: absolute;
+            left: 0;
+            top: 5px;
+            @extend %fa-icon;
+            @extend .fas;
+
+            &:before {
+                content: fa-content($fa-var-feather-alt);
+            }
+        }
+    }
+}
+/* nav style */
+nav{
+    padding: 2rem;
+    a{
+        color: $white !important
+    }
+    ul{
+        li{
+            a{
+                font-size: 1.2rem;
+                margin: 0px 1rem;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width:0;
+                    border-radius: 3px;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    transition: 0.5s ease-in-out;
+                    background: rgba($white, 0.7)
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }        
+            }
+        }
+    }
+    .getquote{
+        font-size: 24px;
+        border-radius: 100%;
+        display: inline-block;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+        border: 3px solid $white;
+        box-shadow: 0px 0px 0 3px rgba($white, 0.3);
+        animation: border 1s ease-in-out infinite;
+        &:hover{
+            border-color: rgba($black, 0.3)
+        }      
+    }
+}
+@keyframes border {
+    0% { box-shadow: 0px 0px 0 3px rgba($white, 0.3);}
+    50%{ box-shadow: 0px 0px 0 5px rgba($white, 0.5);}
+    50%{ box-shadow: 0px 0px 0 8px rgba($white, 0.7);}
+}
+/* hero banner style */
+.heroBanner{
+    padding: 10rem 0;
+    h1{
+        font-size: 3rem;
+        font-weight: 900;
+        position: relative;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        display: table;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            left: 0;
+            background: $white
+        }
+    }
+    h2{
+        font-size: 3rem;
+        margin: 1rem 0
+    }
+    p{
+        font-size: 2rem;
+        font-weight: 200
+    }
+}
+/* About us style*/
+.about{
+    .container{
+        background: rgba($black, 0.3);
+        border-radius: 10px;
+        h2{
+            font-size: 3rem;
+            font-weight: 900;
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            display: table;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 50%;
+                height: 2px;
+                left: 0;
+                background: $white
+            }
+        }
+        span{
+            font-size: 2rem
+        }
+        p{
+            font-weight: 200;
+            font-size: 1.2rem
+        }
+    }
+}
