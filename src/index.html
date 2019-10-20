@@ -10,9 +10,10 @@
 </head>
 
 <body class="gradientBG">
+    <!-- Header -->
     <nav class="navbar p-4 navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#"><img src="../src/images/logo-white.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,30 +22,50 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
                 </ul>
                 <div class="my-2 my-lg-0">
-                    <a href="#" class="getquote">
+                    <a href="#" class="getquote" data-toggle="modal" data-target="#cynaModalCenter">
                         <i class="far fa-envelope-open"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="heroBanner">
+    <!-- Contact Popup -->
+          <div class="modal fade contact" id="cynaModalCenter" tabindex="-1" role="dialog" aria-labelledby="cynaModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              <h2>Contact Us</h2>
+                              <form name="contact" method="POST">
+                                  <input type="text" class="form-control" name="name" placeholder="Name">
+                                  <input type="email" class="form-control" name="email" placeholder="Email">
+                                  <input type="text" class="form-control" name="phone" placeholder="Phone">
+                                  <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                  <textarea class="form-control" placeholder="Message"></textarea>
+                                  <input class="btn" type="submit" name="submit" value="Send">
+                              </form>
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30703620.672472216!2d64.41390989859407!3d20.050418843029927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1571487739350!5m2!1sen!2sin" frameborder="0"  allowfullscreen=""></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- Hero Banner-->
+    <div class="heroBanner" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mt-5">
@@ -61,13 +82,13 @@
             </div>
         </div>
     </div>
-    <section class="about pb-5">
+    <section class="about pb-5" id="about">
         <div class="container p-5">
             <div class="row">
-                <div class="col-lg-4 mt-3 mb-3">
-                    <img src="../src/images/img2.png" alt="img">
+                <div class="col-lg-4 mt-1 mb-1 align-self-center">
+                    <img src="../src/images/about.png" alt="img">
                 </div>
-                <div class="col-lg-8 pl-5 mt-3 mb-3">
+                <div class="col-lg-8 pl-5 mt-1 mb-1">
                     <h2>About Us</h2>
                     <span>Mattis molestie a iaculis at</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -91,8 +112,128 @@
             </div>
         </div>
     </section>
+    <section class="services pt-5 pb-5" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <a href="#" class="col">
+                    <i class="fab fa-connectdevelop"></i>
+                    <h3>Software Development</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Web Design Development</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fab fa-searchengin"></i>
+                    <h3>SEO</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3>Graphic Design</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fab fa-digital-ocean"></i>
+                    <h3>Digital Marketing</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Technology</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fab fa-digital-ocean"></i>
+                    <h3>Digital Marketing</h3>
+                </a>
+                <a href="#" class="col">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Technology</h3>
+                </a>
+            </div>
+        </div>        
+    </section>
+    <section class="testimonials pt-5 pb-5" id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="col-lg-8 offset-lg-2">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                        <span>
+                            <b>Client Name</b>
+                            Designation
+                        </span>
+                      </div>
+                      <div class="carousel-item">
+                            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            <span>
+                                <b>Client Name</b>
+                                Designation
+                            </span>
+                      </div>
+                      <div class="carousel-item">
+                            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            <span>
+                                <b>Client Name</b>
+                                Designation
+                            </span>
+                      </div>
+                    </div>
+                    <ol class="carousel-indicators mt-3">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          </ol>
+                  </div>
+                </div>
+        </div>
+    </section>
+    <footer class="pt-4 pb-3">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>New Delhi, Delhi 201313, India</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@cynautix.com</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-phone"></i>
+                    <p>011 5768 56789</p>
+                </div>
+                <div class="col">
+                    <i class="fas fa-smile-wink"></i>
+                    <p>other Information</p>
+                </div>
+            </div>
+            <hr>
+            <div class="float-right scl">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="float-left copyright">
+                <p>Site Design © 2019 Cynautix. | <a href="#">Terms</a> | <a href="#">Privacy</a></p>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 50) {
+        $("nav").addClass("sticky");
+    } else {
+        $("nav").removeClass("sticky");
+    }
+});
+    </script>
 </body>
 
 </html>
