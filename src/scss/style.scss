@@ -24,6 +24,7 @@ img{
 /* bootstrap Custom style */
 .container{
     max-width: 1600px;
+    padding: 0px 3rem;
 }
 /* List Style */
 .listStyle{
@@ -51,6 +52,9 @@ img{
 /* nav style */
 nav{
     padding: 2rem;
+    transition: padding 0.4s ease;
+    z-index: 999;
+
     a{
         color: $white !important
     }
@@ -94,6 +98,10 @@ nav{
             border-color: rgba($black, 0.3)
         }      
     }
+    &.sticky{
+        background: rgba($black, 0.7);
+        padding: 0.2rem 1rem !important;     
+    }
 }
 @keyframes border {
     0% { box-shadow: 0px 0px 0 3px rgba($white, 0.3);}
@@ -102,7 +110,7 @@ nav{
 }
 /* hero banner style */
 .heroBanner{
-    padding: 10rem 0;
+    padding: 8rem 0;
     h1{
         font-size: 3rem;
         font-weight: 900;
@@ -121,16 +129,17 @@ nav{
         }
     }
     h2{
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 1rem 0
     }
     p{
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 200
     }
 }
 /* About us style*/
 .about{
+    padding: 0px 3rem;
     .container{
         background: rgba($black, 0.3);
         border-radius: 10px;
@@ -157,6 +166,142 @@ nav{
         p{
             font-weight: 200;
             font-size: 1.2rem
+        }
+    }
+}
+/* Services style*/
+.services{
+    h2{
+        font-weight: 900;
+        font-size: 3rem;
+        position: relative;
+        padding-bottom: 1rem;
+        margin:0 auto 1rem;
+        display: table;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            left: 0;
+            background: $white
+        }        
+    }
+    .col{
+        background: rgba($white, 0.3);
+        text-align: center;
+        color: $white;
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+
+        &:hover{
+            background: rgba($white, 0.4)        
+        }
+        i{
+            font-size: 3rem
+        }
+        h3{
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 200
+        }
+    }
+}
+/* testimonials style*/
+.testimonials{
+    h2{
+        font-weight: 900;
+        font-size: 3rem;
+        position: relative;
+        padding-bottom: 1rem;
+        margin:0 auto 1rem;
+        display: table;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 2px;
+            left: 0;
+            background: $white
+        }        
+    }
+    .carousel-item{
+        p{
+            font-size: 1.3rem;
+            font-style: italic;
+            font-weight: 200
+        }
+        span{
+            b{
+                display: block;
+            }
+        }
+    }
+    .carousel-indicators{
+        position: relative
+    }
+}
+
+/* footer style */
+footer{
+    border-top: 2px solid $white;
+    i{
+        font-size: 1.5rem;
+        margin-bottom: 1rem
+    }
+    a{
+        color: $white
+    }
+    .scl{
+        margin: 1rem 0;
+        a{
+            margin: 0px 1rem;
+        }
+    }
+    .copyright{
+        margin: 1rem 0;
+    }
+}
+/* Contact Model*/
+.contact{
+    .modal-content{
+        background: rgba($black, 0.6);
+        .close{
+            opacity: 1;
+            border-radius: 20px;
+            height: 25px;
+            width: 25px;
+            border: 2px solid;
+            padding: 0;
+            color: $white;
+            line-height: 3px;
+            text-shadow: none;
+        }
+        .form-control{
+            color: $white;
+            background: none;
+            border: none;
+            border-bottom: 1px solid;
+            border-radius: 0;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        .btn{
+            background: none;
+            border: 1px solid $white;
+            border-radius:30px;
+            margin: 1rem 0;
+            padding: 8px 3rem;
+            color: $white;
+            font-weight:700
+        }
+        iframe{
+            width: 100%;
+            height: 250px;
         }
     }
 }
