@@ -1,90 +1,113 @@
 /* Bootstrap css */
+
 @import "../../node_modules/bootstrap-scss/bootstrap.scss";
+
 /* FontAwesome css */
+
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700,900&display=swap');
 
-.gradientBG{
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700,900&display=swap');
+.gradientBG {
     background-image: linear-gradient(to right top, #2aacff, #21a2f9, #1a99f2, #148feb, #1086e4, #028ee8, #0096ec, #009eef, #00b8f8, #00d0f8, #00e7f1, #5ffbe7);
     background-size: cover;
     background-attachment: fixed
 }
-body{
+
+body {
     font-family: 'Nunito', sans-serif;
     color: $white;
     background: none
 }
-img{
+
+img {
     max-width: 100%
 }
+
+
 /* bootstrap Custom style */
-.container{
+
+.container {
     max-width: 1600px;
     padding: 0px 3rem;
 }
+
+
 /* List Style */
-.listStyle{
+
+.listStyle {
     list-style: none;
     margin: 2rem 0;
     padding: 0;
-    li{
+    li {
         position: relative;
         margin: 1rem 0;
         font-size: 1.1rem;
         padding-left: 35px;
-        i{
+        i {
             position: absolute;
             left: 0;
             top: 5px;
             @extend %fa-icon;
             @extend .fas;
-
             &:before {
                 content: fa-content($fa-var-feather-alt);
             }
         }
     }
 }
+
+
 /* nav style */
-nav{
+
+nav {
     padding: 2rem;
     transition: padding 0.4s ease;
     z-index: 999;
-
-    a{
+    a {
         color: $white !important
     }
-    ul{
-        li{
-            a{
-                font-size: 1.2rem;
-                margin: 0px 1rem;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    width:0;
-                    border-radius: 3px;
-                    height: 1px;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    transition: 0.5s ease-in-out;
-                    background: rgba($white, 0.7)
-                }
-                &:hover{
-                    &::after{
-                        width: 100%;
+    .navbar-toggler {
+        background: #fff;
+    }
+    .navbar-collapse {
+        ul {
+            li {
+                a {
+                    font-size: 1.2rem;
+                    margin: 0px 1rem;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        border-radius: 3px;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        transition: 0.5s ease-in-out;
+                        background: rgba($white, 0.7)
                     }
-                }        
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
+        @media (max-width: 991.98px) {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
     }
-    .getquote{
+    .getquote {
         font-size: 24px;
         border-radius: 100%;
         display: inline-block;
@@ -94,31 +117,42 @@ nav{
         border: 3px solid $white;
         box-shadow: 0px 0px 0 3px rgba($white, 0.3);
         animation: border 1s ease-in-out infinite;
-        &:hover{
+        margin-left: 20px;
+        &:hover {
             border-color: rgba($black, 0.3)
-        }      
+        }
     }
-    &.sticky{
+    &.sticky {
         background: rgba($black, 0.7);
-        padding: 0.2rem 1rem !important;     
+        padding: 0.2rem 1rem !important;
     }
 }
+
 @keyframes border {
-    0% { box-shadow: 0px 0px 0 3px rgba($white, 0.3);}
-    50%{ box-shadow: 0px 0px 0 5px rgba($white, 0.5);}
-    50%{ box-shadow: 0px 0px 0 8px rgba($white, 0.7);}
+    0% {
+        box-shadow: 0px 0px 0 3px rgba($white, 0.3);
+    }
+    50% {
+        box-shadow: 0px 0px 0 5px rgba($white, 0.5);
+    }
+    50% {
+        box-shadow: 0px 0px 0 8px rgba($white, 0.7);
+    }
 }
+
+
 /* hero banner style */
-.heroBanner{
+
+.heroBanner {
     padding: 8rem 0;
-    h1{
+    h1 {
         font-size: 3rem;
         font-weight: 900;
         position: relative;
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         display: table;
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -128,29 +162,32 @@ nav{
             background: $white
         }
     }
-    h2{
+    h2 {
         font-size: 2.5rem;
         margin: 1rem 0
     }
-    p{
+    p {
         font-size: 1.8rem;
         font-weight: 200
     }
 }
+
+
 /* About us style*/
-.about{
+
+.about {
     padding: 0px 3rem;
-    .container{
+    .container {
         background: rgba($black, 0.3);
         border-radius: 10px;
-        h2{
+        h2 {
             font-size: 3rem;
             font-weight: 900;
             position: relative;
             padding-bottom: 1rem;
             margin-bottom: 1rem;
             display: table;
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 bottom: 0;
@@ -160,25 +197,28 @@ nav{
                 background: $white
             }
         }
-        span{
+        span {
             font-size: 2rem
         }
-        p{
+        p {
             font-weight: 200;
             font-size: 1.2rem
         }
     }
 }
+
+
 /* Services style*/
-.services{
-    h2{
+
+.services {
+    h2 {
         font-weight: 900;
         font-size: 3rem;
         position: relative;
         padding-bottom: 1rem;
-        margin:0 auto 1rem;
+        margin: 0 auto 1rem;
         display: table;
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -186,9 +226,9 @@ nav{
             height: 2px;
             left: 0;
             background: $white
-        }        
+        }
     }
-    .col{
+    .col {
         background: rgba($white, 0.3);
         text-align: center;
         color: $white;
@@ -196,30 +236,32 @@ nav{
         padding: 2rem;
         border-radius: 10px;
         text-decoration: none;
-
-        &:hover{
-            background: rgba($white, 0.4)        
+        &:hover {
+            background: rgba($white, 0.4)
         }
-        i{
+        i {
             font-size: 3rem
         }
-        h3{
+        h3 {
             font-size: 1.5rem;
             margin-top: 1rem;
             font-weight: 200
         }
     }
 }
+
+
 /* testimonials style*/
-.testimonials{
-    h2{
+
+.testimonials {
+    h2 {
         font-weight: 900;
         font-size: 3rem;
         position: relative;
         padding-bottom: 1rem;
-        margin:0 auto 1rem;
+        margin: 0 auto 1rem;
         display: table;
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -227,50 +269,55 @@ nav{
             height: 2px;
             left: 0;
             background: $white
-        }        
+        }
     }
-    .carousel-item{
-        p{
+    .carousel-item {
+        p {
             font-size: 1.3rem;
             font-style: italic;
             font-weight: 200
         }
-        span{
-            b{
+        span {
+            b {
                 display: block;
             }
         }
     }
-    .carousel-indicators{
+    .carousel-indicators {
         position: relative
     }
 }
 
+
 /* footer style */
-footer{
+
+footer {
     border-top: 2px solid $white;
-    i{
+    i {
         font-size: 1.5rem;
         margin-bottom: 1rem
     }
-    a{
+    a {
         color: $white
     }
-    .scl{
+    .scl {
         margin: 1rem 0;
-        a{
+        a {
             margin: 0px 1rem;
         }
     }
-    .copyright{
+    .copyright {
         margin: 1rem 0;
     }
 }
+
+
 /* Contact Model*/
-.contact{
-    .modal-content{
+
+.contact {
+    .modal-content {
         background: rgba($black, 0.6);
-        .close{
+        .close {
             opacity: 1;
             border-radius: 20px;
             height: 25px;
@@ -281,7 +328,7 @@ footer{
             line-height: 3px;
             text-shadow: none;
         }
-        .form-control{
+        .form-control {
             color: $white;
             background: none;
             border: none;
@@ -290,16 +337,16 @@ footer{
             padding: 0;
             margin-bottom: 1rem;
         }
-        .btn{
+        .btn {
             background: none;
             border: 1px solid $white;
-            border-radius:30px;
+            border-radius: 30px;
             margin: 1rem 0;
             padding: 8px 3rem;
             color: $white;
-            font-weight:700
+            font-weight: 700
         }
-        iframe{
+        iframe {
             width: 100%;
             height: 250px;
         }

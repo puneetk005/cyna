@@ -16523,13 +16523,17 @@ nav a {
   color: #fff !important;
 }
 
-nav ul li a {
+nav .navbar-toggler {
+  background: #fff;
+}
+
+nav .navbar-collapse ul li a {
   font-size: 1.2rem;
   margin: 0px 1rem;
   position: relative;
 }
 
-nav ul li a::after {
+nav .navbar-collapse ul li a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -16543,8 +16547,16 @@ nav ul li a::after {
   background: rgba(255, 255, 255, 0.7);
 }
 
-nav ul li a:hover::after {
+nav .navbar-collapse ul li a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  nav .navbar-collapse {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
 
 nav .getquote {
@@ -16559,6 +16571,7 @@ nav .getquote {
           box-shadow: 0px 0px 0 3px rgba(255, 255, 255, 0.3);
   -webkit-animation: border 1s ease-in-out infinite;
           animation: border 1s ease-in-out infinite;
+  margin-left: 20px;
 }
 
 nav .getquote:hover {
